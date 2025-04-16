@@ -23,6 +23,8 @@ jobs:
         pylint $(git ls-files '*.py')
     - name: sast-scan
       uses: AppThreat/sast-scan-action@1.0.2
+      with:
+        type: "python"
     - name: Bandit Scan
       uses: shundor/python-bandit-scan@v1.0
       
